@@ -15,5 +15,9 @@ export const routes: Routes = [
   {
     path: 'cocktails/:cocktailId',
     component: CocktailDetailComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'cocktails'
   }
 ];
