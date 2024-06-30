@@ -1,0 +1,44 @@
+<div class="back-to-home">
+  <a [routerLink]="['/cocktails']">Back</a>
+</div>
+
+<div class="details-wrapper">
+  @if (cocktailDetail() ) {
+  <div class="image">
+    <img alt="{{ cocktailDetail()?.name }}" [src]="cocktailDetail()?.imageUrl" />
+  </div>
+  <div class="details">
+    <div class="label">
+      <h2>{{ cocktailDetail()?.name }}</h2>
+      <span (click)="onFavoriteClick()" [class.active]="favoriteCocktailListAsMap.has(cocktailId())" class="icon-star"></span>
+    </div>
+
+    <div class="other-details">
+      <div class="type">
+        <span class="bold-500">Type:</span>
+        <app-tags
+          [tagBgColor]="cocktailDetail()?.isAlcoholic ? cocktailTypeBgColor.ALCHOLIC : cocktailTypeBgColor.NON_ALCHOLIC"
+          [label]="cocktailDetail()?.isAlcoholic ? cocktailType.ALCHOLIC : cocktailType.NON_ALCHOLIC"
+        ></app-tags>
+      </div>
+
+      <div class="ingrediants">
+        <span class="bold-500">Ingredients:</span>
+        <ul>
+          @for (ingredient of cocktailDetail()?.ingredients; track $index) {
+          <li>{{ ingredient }}</li>
+          }
+        </ul>
+      </div>
+      <div class="instructions">
+        <span class="bold-500">Instructions:</span>
+        <span>
+          {{ cocktailDetail()?.instructions }}
+        </span>
+      </div>
+    </div>
+  </div>
+  } @else {
+  <h2 class="error-message">Cannot fetch details.</h2>
+  }
+</div>

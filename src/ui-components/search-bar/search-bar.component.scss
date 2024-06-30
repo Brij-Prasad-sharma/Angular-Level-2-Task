@@ -1,0 +1,8 @@
+@import '../../assets/scss/default.style.scss';
+
+:host {
+  input {
+    border: 1px solid;
+    border-radius: $spacer;
+  }
+}

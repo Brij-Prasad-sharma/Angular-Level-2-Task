@@ -1,0 +1,48 @@
+/**
+ * Colors
+**/
+$primary-color: #d5d8dc;
+$color-white: #fff;
+
+/**
+ * Spacing
+**/
+$spacer: 4px;
+$border-radius: 4px;
+
+/**
+ * Icons
+**/
+$star-icon-sm: 10px;
+$star-icon-md: 15px;
+$star-icon-lg: 20px;
+
+/**
+ * Label classes
+**/
+.label-xs {
+  font-size: 8px;
+}
+
+.label-sm {
+  font-size: 10px;
+}
+
+.label-md {
+  font-size: 12px;
+}
+
+.label-lg {
+  font-size: 14px;
+}
+
+/**
+ * Font Bold classes
+**/
+.bold-400 {
+  font-weight: 400;
+}
+
+.bold-500 {
+  font-weight: 500;
+}

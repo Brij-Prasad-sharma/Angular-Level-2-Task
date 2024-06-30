@@ -1,0 +1,53 @@
+@import '../../../../assets/scss/default.style.scss';
+
+$cocktail-item-width: 350px;
+$cocktail-item-height: 100px;
+$cocktail-item-border: 1px solid grey;
+
+:host {
+  display: flex;
+  border-radius: $border-radius * 2;
+  width: $cocktail-item-width;
+  height: $cocktail-item-height;
+  gap: $spacer * 3;
+  border: $cocktail-item-border;
+  position: relative;
+
+  .image-wrapper {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      border-top-left-radius: $spacer * 2;
+      border-bottom-left-radius: $spacer * 2;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: $spacer;
+    padding: $spacer * 2 $spacer * 2 $spacer * 2 0px;
+
+    .title {
+      font-weight: 400;
+    }
+
+    .icon-star {
+      position: absolute;
+      top: $spacer;
+      right: $spacer;
+    }
+
+    .tag {
+      display: flex;
+      width: auto;
+      height: auto;
+    }
+
+    .ingredients {
+      font-size: 10px;
+    }
+  }
+}

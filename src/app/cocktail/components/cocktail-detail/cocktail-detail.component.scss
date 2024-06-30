@@ -1,0 +1,74 @@
+@import '../../../../assets/scss/default.style.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: $spacer * 3;
+
+  .back-to-home {
+    display: inline;
+    padding: $spacer * 2;
+    background-color: $primary-color;
+  }
+
+  .details-wrapper {
+    display: flex;
+    gap: $spacer * 6;
+
+    .image {
+      width: 400px;
+      height: auto;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: $spacer * 4;
+      padding-top: $spacer * 4;
+      width: 100%;
+
+      .label {
+        display: flex;
+        gap: $spacer * 2;
+
+        h2 {
+          margin: 0;
+        }
+
+        span.icon-star {
+          height: $star-icon-lg;
+          width: $star-icon-lg;
+        }
+      }
+
+      .other-details {
+        display: flex;
+        flex-direction: column;
+        gap: $spacer * 6;
+
+        > div {
+          display: flex;
+          align-items: center;
+
+          > :first-child {
+            width: 30%;
+          }
+
+          > :last-child {
+            width: 70%;
+          }
+
+          app-tags {
+            width: auto !important;
+          }
+        }
+      }
+    }
+  }
+}

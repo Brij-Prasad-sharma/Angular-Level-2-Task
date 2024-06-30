@@ -1,0 +1,23 @@
+@import '../../../../assets/scss/default.style.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: $spacer * 3;
+
+  .search-bar-wrapper {
+    background-color: #e5e9f0;
+    padding: $spacer * 3;
+  }
+
+  .cocktail-list-wrapper {
+    display: flex;
+    gap: $spacer * 3;
+    flex-wrap: wrap;
+    padding-bottom: $spacer * 3;
+
+    > app-cocktail-item {
+      flex-grow: 1;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<div class="image-wrapper">
+  <img alt="{{ item().name }}" [src]="item().imageUrl" />
+</div>
+
+<div class="details">
+  <span [class.active]="isFavorite()" (click)="onFavoriteClick()" class="icon-star" [id]="'star-' + item().id"></span>
+  <a [routerLink]="[item().id]" class="title">
+    {{ item().name }}
+  </a>
+
+  <div class="tag">
+    <app-tags
+      [tagBgColor]="item().isAlcoholic ? cocktailTypeBgColor.ALCHOLIC : cocktailTypeBgColor.NON_ALCHOLIC"
+      [label]="item().isAlcoholic ? cocktailType.ALCHOLIC : cocktailType.NON_ALCHOLIC"
+    ></app-tags>
+  </div>
+
+  <div class="ingredients">
+    <span>{{ item().ingredients | cocktailIngredientsDisplay }}</span>
+  </div>
+</div>

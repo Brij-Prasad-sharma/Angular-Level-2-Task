@@ -1,0 +1,14 @@
+@import '../../assets/scss/default.style.scss';
+
+$tag-title-font-size: 8px;
+$tag-padding: 1px $spacer * 2;
+
+:host {
+  span {
+    display: inline-block;
+    border-radius: $spacer * 2;
+    font-size: $tag-title-font-size;
+    color: $color-white;
+    padding: $tag-padding;
+  }
+}

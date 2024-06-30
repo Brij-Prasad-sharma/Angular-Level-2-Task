@@ -1,0 +1,16 @@
+<div class="search-bar-wrapper">
+  <h2>Filter</h2>
+  <app-search-bar label="Cocktail Name" placeholder="Search cocktail by name" (search)="listenSearch($event)"></app-search-bar>
+</div>
+
+<div class="cocktail-list-wrapper">
+  @if (cocktailItems.length) { @for (cocktail of cocktailItems | cocktailSearch : searchedText; track $index ) {
+  <app-cocktail-item
+    [item]="cocktail"
+    [isFavorite]="favoriteCocktailListAsMap.has(cocktail.id)"
+    (favoriteClicked)="onFavoriteClicked($event)"
+  ></app-cocktail-item>
+  } } @else {
+  <h2>Loading...</h2>
+  }
+</div>
