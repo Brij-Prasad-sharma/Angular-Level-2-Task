@@ -44,6 +44,10 @@ $cocktail-item-border: 1px solid grey;
       display: flex;
       width: auto;
       height: auto;
+
+      app-tags {
+        display: flex;
+      }
     }
 
     .ingredients {
